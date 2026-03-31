@@ -1,4 +1,4 @@
-from app import run_app
+from bun_data_analysis.ui import run_app
 
 
 if __name__ == "__main__":
