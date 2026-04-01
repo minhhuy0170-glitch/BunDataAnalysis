@@ -36,9 +36,33 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## Dua len Render de lay link co dinh
+
+Neu ban muon link co dinh de test va chia se, Render la cach don gian cho project nay.
+
+Render yeu cau web service phai bind vao host `0.0.0.0` va port tu bien moi truong `PORT`. Project nay da co san:
+
+- `start.sh` de chay Streamlit dung port cua Render
+- `render.yaml` de luu cau hinh deploy
+- `.python-version` de khoa phien ban Python on dinh
+
+Theo tai lieu chinh thuc cua Render, ban co the deploy tu repo GitHub lien ket hoac tu URL cua public repo. Cau hinh tuong ung cho project nay la:
+
+- Service type: `Web Service`
+- Runtime/Language: `Python`
+- Build command: `pip install -r requirements.txt`
+- Start command: `./start.sh`
+- Branch: `main`
+
+Tai lieu tham khao:
+
+- [Render Web Services](https://render.com/docs/web-services)
+- [Render Blueprint YAML Reference](https://render.com/docs/blueprint-spec)
+- [Setting Your Python Version on Render](https://render.com/docs/python-version)
+
 ## Dua len Streamlit Community Cloud
 
-Theo tai lieu chinh thuc cua Streamlit Community Cloud, ban can mot repo GitHub va chon repo, branch, file entrypoint khi deploy. Cau hinh khuyen dung cho project nay la:
+Ban van co the deploy len Streamlit Community Cloud neu muon:
 
 - Repository: `BunDataAnalysis`
 - Branch: `main`
