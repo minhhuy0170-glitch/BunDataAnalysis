@@ -16,12 +16,15 @@ BunDataAnalysis la ung dung Streamlit tong quat de kham pha va phan tich tep CSV
 .
 ├── sample_dataset.csv
 ├── app.py
-├── main.py
+├── start.sh
+├── render.yaml
 ├── bun_data_analysis
 │   ├── data.py
 │   ├── charts.py
 │   ├── modeling.py
 │   └── ui.py
+├── scripts
+│   └── ensure_streamlit_assets.py
 ├── tests
 │   └── test_data_processing.py
 └── requirements.txt
@@ -53,6 +56,28 @@ Theo tai lieu chinh thuc cua Render, ban co the deploy tu repo GitHub lien ket h
 - Build command: `pip install -r requirements.txt`
 - Start command: `./start.sh`
 - Branch: `main`
+- Environment Variables: khong can them gi
+
+### Cach tao web co dinh tren Render
+
+1. Vao `dashboard.render.com` va bam `New` -> `Web Service`.
+2. Chon `Public Git Repository`.
+3. Dan repo URL: `https://github.com/minhhuy0170-glitch/BunDataAnalysis`
+4. Dien:
+   `Name`: `bundataanalysis`
+   `Branch`: `main`
+   `Language`: `Python`
+   `Build Command`: `pip install -r requirements.txt`
+   `Start Command`: `./start.sh`
+   `Instance Type`: `Free`
+5. De trong `Environment Variables`.
+6. Bam `Create Web Service`.
+
+Sau khi deploy xong, ban se co link co dinh dang `https://ten-app.onrender.com`.
+
+Link hien tai cua project:
+
+- `https://bundataanalysis.onrender.com/`
 
 Tai lieu tham khao:
 

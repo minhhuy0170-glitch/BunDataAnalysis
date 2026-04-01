@@ -2,3 +2,6 @@
 .pytest_cache/
 __pycache__/
 *.pyc
+.idea/
+.devcontainer/
+.DS_Store
